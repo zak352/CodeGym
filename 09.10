@@ -1,1 +1,40 @@
+public class Prymitywy
+{
+  public static void main(String[] args)
+  {
+    Student jola = new Student(); //jola korzyssta z klasy Student w ktorej mozna podac .imie i .wiek
+    jola.imie = "Jola"; 
+    jola.wiek = 21;
 
+    Student ela = new Student();
+    ela.imie = "Ela";
+    ela.wiek = 15;
+
+    System.out.println("Jola ma " + jola.wiek);
+    System.out.println("Jola ma na imie " + jola.imie);
+    
+    System.out.println("Ela ma " + ela.wiek);
+
+     Student a = jola, b = ela;
+
+    int c = jola.wiek; //zmienna dodatkowa bez której obie miałby by tyle samo lat
+    a.wiek = ela.wiek;
+    b.wiek = c;
+
+/*lub
+int c = a.wiek;
+    a.wiek = b.wiek;
+    b.wiek = c;
+    */
+    
+    System.out.println("Jola ma " + jola.wiek);
+    System.out.println("Ela ma " + ela.wiek);
+  }
+
+
+  static class Student
+  {
+    String imie;
+    int wiek;
+  }
+}
